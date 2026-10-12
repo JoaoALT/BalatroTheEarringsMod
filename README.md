@@ -1,9 +1,13 @@
-a balatro mod adding new blinds, each one from The Earrings characters, by MinCout.
+A Balatro mod made by MinCout, adding new blinds from  "The Earrings" story by me!
 
 # Requirements
-Requires the latest version **Steamodded** 1.0.0-BETA.  
+Requires the latest version **Steamodded** 1.0.0-BETA.
 Instructions can be found [here](https://github.com/Steamopollys/Steamodded/wiki/01.-Getting-started).
 
 # Installation
-Head to the mod's *[Releases](https://github.com/JoaoALT/BalatroTheEarringsMod/releases/tag/v1.0.0)* page and download the latest version.  
-You can also *clone* this repository, however, some things may break.
+Go to the releases on the right of the github page or click on here: *[Releases](https://github.com/JoaoALT/BalatroTheEarringsMod/releases/tag/v1.0.0)*. Download the latest version available, you can also clone the repository.
+
+## Additional credits
+- [ModernYasha](https://x.com/ModernYasha), Made the sprite of the current Sydney_Roux blind.
+- [MystBlidns](https://github.com/Mysthaps/MystBlinds) Base architecture for blind based mods.
+- [MinCout](https://x.com/MinCouty) The main artist and programmer, myself!
