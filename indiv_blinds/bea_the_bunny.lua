@@ -15,7 +15,7 @@ local blind_defeat_ref = Blind.defeat
 
 -- 2. Override the global Blind.defeat
 function Blind.defeat(self, kwargs)
-    -- 3. Check if the defeated blind is yours
+    -- 3. Check if the defeated blind is Bea
     local is_bea = (self.name == "bl_earring_bea_the_bunny") or 
                    (self.name == "Bea the bunny") or 
                    (self.config and self.config.blind and self.config.blind.key == "bl_earring_bea_the_bunny")

@@ -21,7 +21,7 @@ local mod_path = SMODS.current_mod.path
 SMODS.Atlas({ 
     key = "TheEarrings", 
     atlas_table = "ANIMATION_ATLAS", 
-    path = "EarringsBlinds.png", 
+    path = "EarringsBlindsmod.png", 
     px = 34, 
     py = 34, 
     frames = 21 
@@ -39,6 +39,11 @@ SMODS.Atlas({
     path = "blackseal_icon.png",
     px = 71,
     py = 95
+})
+
+SMODS.Sound({
+    key = "sydney_slash",
+    path = "sydney_slash.wav",
 })
 
 for k, v in ipairs(blind_list) do

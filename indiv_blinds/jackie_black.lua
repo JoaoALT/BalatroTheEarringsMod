@@ -5,13 +5,13 @@ local blind = {
     mult = 2, 
     vars = {}, 
     debuff = {},
-    boss = {min = 1, max = 10},
+    boss = {min = 5, max = 10},
     boss_colour = HEX('0F0E0E'),
     loc_txt = {}
 }
 
 blind.press_play = function(self)
-    -- Apply dark seal to all played spades/clubs
+    -- Apply dark seal to 20% of played spades/clubs
     local dominated = false
     for _, v in ipairs(G.hand.highlighted) do
         if v:is_suit('Spades') or v:is_suit('Clubs') then

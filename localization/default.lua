@@ -19,7 +19,7 @@ return {
                 name = "Vida Fox",
                 text = {
                     "Score requirements increase",
-                    "by 0.01% every second."
+                    "by 0.005% every second."
                 }
             },
             bl_earring_jackie_black = {
