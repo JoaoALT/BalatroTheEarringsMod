@@ -5,7 +5,7 @@ Requires the latest version **Steamodded** 1.0.0-BETA.
 Instructions can be found [here](https://github.com/Steamopollys/Steamodded/wiki/01.-Getting-started).
 
 # Installation
-Go to the releases on the right of the github page or click on here: *[Releases](https://github.com/JoaoALT/BalatroTheEarringsMod/releases/tag/v1.0.0)*. Download the latest version available, you can also clone the repository.
+Go to the releases on the right of the github page or click on here: *[Releases](https://github.com/JoaoALT/BalatroTheEarringsMod/releases/tag/v1.0-alpha)*. Download the latest version available, you can also clone the repository.
 
 ## Additional credits
 - [ModernYasha](https://x.com/ModernYasha), Made most of the sprites of the current blinds.
