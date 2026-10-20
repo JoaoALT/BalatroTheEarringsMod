@@ -8,6 +8,6 @@ Instructions can be found [here](https://github.com/Steamopollys/Steamodded/wiki
 Go to the releases on the right of the github page or click on here: *[Releases](https://github.com/JoaoALT/BalatroTheEarringsMod/releases/tag/v1.0.0)*. Download the latest version available, you can also clone the repository.
 
 ## Additional credits
-- [ModernYasha](https://x.com/ModernYasha), Made the sprite of the current Sydney_Roux blind.
+- [ModernYasha](https://x.com/ModernYasha), Made most of the sprites of the current blinds.
 - [MystBlidns](https://github.com/Mysthaps/MystBlinds) Base architecture for blind based mods.
-- [MinCout](https://x.com/MinCouty) The main artist and programmer, myself!
+- [MinCout](https://x.com/MinCouty) The main modder and also part of the art contributions, myself!
