@@ -1,4 +1,4 @@
-A Balatro mod made by MinCout, adding new blinds from  "The Earrings" story by me!
+A Balatro mod made by MinCout, adding new blinds from "The Earrings" story by me! more features coming in a future.
 
 # Requirements
 Requires the latest version **Steamodded** 1.0.0-BETA.
