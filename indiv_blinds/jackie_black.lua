@@ -11,12 +11,13 @@ local blind = {
 }
 
 blind.press_play = function(self)
-    -- Apply dark seal to 20% of played spades/clubs
+    -- Apply dark seal to 25% of played spades/clubs
     local dominated = false
     for _, v in ipairs(G.hand.highlighted) do
         if v:is_suit('Spades') or v:is_suit('Clubs') then
-            if math.random() <= 0.2 then
+            if math.random() <= 0.25 then
                 v:set_seal('earring_dark', true, true)
+                play_sound('earring_jackie_click', 1, 0.8)
                 dominated = true
             end
         end
@@ -26,7 +27,7 @@ blind.press_play = function(self)
     end
 end
 
-blind.debuff_card = function(self, card, from_blind)
+blind.recalc_debuff = function(self, card, from_blind)
     return false
 end
 

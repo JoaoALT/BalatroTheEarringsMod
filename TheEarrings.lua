@@ -16,6 +16,12 @@ local blind_list = {
     "bea_the_bunny",
 }
 
+-- Set of earring blind keys for fast lookup
+local earring_blind_keys = {}
+for _, v in ipairs(blind_list) do
+    earring_blind_keys["bl_earring_" .. v] = true
+end
+
 local mod_path = SMODS.current_mod.path
 
 SMODS.Atlas({ 
@@ -41,9 +47,23 @@ SMODS.Atlas({
     py = 95
 })
 
+-- Deck back atlas
+SMODS.Atlas({
+    key = "earrings_deck_atlas",
+    path = "earrings_deck.png",
+    px = 71,
+    py = 95
+})
+
+-- Sound atlas
 SMODS.Sound({
     key = "sydney_slash",
     path = "sydney_slash.wav",
+})
+
+SMODS.Sound({
+    key = "jackie_click",
+    path = "jackie_click.wav",
 })
 
 for k, v in ipairs(blind_list) do
@@ -55,6 +75,18 @@ for k, v in ipairs(blind_list) do
         blind.key = v
         blind.atlas = "TheEarrings"
 
+        -- Add in_pool: always available when earrings deck is active
+        local orig_in_pool = blind.in_pool
+        blind.in_pool = function(self)
+            if G.GAME and G.GAME.modifiers and G.GAME.modifiers.earrings_deck then
+                return true
+            end
+            if orig_in_pool then
+                return orig_in_pool(self)
+            end
+            return true
+        end
+
         local blind_obj = SMODS.Blind(blind)
 
         for k_, v_ in pairs(blind) do
@@ -63,6 +95,40 @@ for k, v in ipairs(blind_list) do
             end
         end
     end
+end
+
+-- The Earrings Deck: only earring blinds appear as bosses
+SMODS.Back({
+    key = "earrings_deck",
+    name = "Earrings Deck",
+    atlas = "earrings_deck_atlas",
+    pos = { x = 0, y = 0 },
+    config = {},
+    loc_txt = {
+        name = "Earrings Deck",
+        text = {
+            "Only {C:attention}Earrings{} bosses",
+            "appear as {C:attention}Boss Blinds{}",
+        }
+    },
+    apply = function(self)
+        G.GAME.modifiers.earrings_deck = true
+    end,
+})
+
+-- Hook SMODS.add_to_pool to filter out non-earring boss blinds when the deck is active
+local orig_add_to_pool = SMODS.add_to_pool
+function SMODS.add_to_pool(prototype_obj, args)
+    if G.GAME and G.GAME.modifiers and G.GAME.modifiers.earrings_deck then
+        -- Only filter boss blinds (objects with a .boss field), leave everything else alone
+        if prototype_obj and prototype_obj.boss then
+            local key = prototype_obj.key
+            if key and not earring_blind_keys[key] then
+                return false
+            end
+        end
+    end
+    return orig_add_to_pool(prototype_obj, args)
 end
 
 if SMODS.Seal then

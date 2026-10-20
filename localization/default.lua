@@ -36,7 +36,25 @@ return {
                     "gives +$1 extra."
                 }
             },
-        }
+        },
+        Back = {
+            b_earring_earrings_deck = {
+                name = "Earrings Deck",
+                text = {
+                    "The {C:attention}Earrings{} deck",
+                    "new {C:attention}Boss Blinds{} and more",
+                }
+            },
+        },
+        Other = {
+            earring_black_seal = {
+                name = "Dark Seal",
+                text = {
+                    "Deceases level of",
+                    "played {C:attention}poker hand{} by 1.",
+                },
+            },
+        },   
     },
     misc = {
         dictionary = {}
